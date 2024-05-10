@@ -1,6 +1,6 @@
 ﻿namespace WebApplication1.Service;
 
-public class IClientService
+public interface IClientService
 {
-    
+    public int deleteClient(int id);
 }

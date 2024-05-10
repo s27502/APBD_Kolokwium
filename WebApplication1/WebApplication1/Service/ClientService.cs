@@ -1,6 +1,17 @@
-﻿namespace WebApplication1.Service;
+﻿using WebApplication1.Repository;
 
-public class ClientService
+namespace WebApplication1.Service;
+
+public class ClientService : IClientService
 {
-    
+    private readonly IClientRepository _clientRepository;
+    public ClientService(IClientRepository clientRepository)
+    {
+        _clientRepository = clientRepository;
+    }
+
+    public int deleteClient(int id)
+    {
+        return _clientRepository.deleteClient(id);;
+    }
 }
